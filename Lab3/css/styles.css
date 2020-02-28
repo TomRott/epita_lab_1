@@ -1,0 +1,278 @@
+*{
+  /*box-sizing: border-box;*/
+}
+body{
+  background-color: #f5f5f5;
+  margin: 0px;
+  padding: 0px; }
+
+/*nav-bar*/
+nav{
+  width: 100%;
+}
+nav > ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+nav li{
+  list-style-type: none;
+}
+
+nav > ul > li{
+  float: left;
+  position: relative;
+  background-color: #2C75FF;
+  margin-right: 2px;
+  width: 33%;
+  text-align: center;
+  transition: background-color 0.5s; 
+}
+nav > ul::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.sousmenu{
+  display: none;
+}
+
+nav input[type=checkbox]{
+  display: none;
+}
+nav label{
+  display: none;
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+}
+nav > ul > li > a{
+  padding: 15px 30px 20px 30px;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+}
+nav > ul > li:hover a{
+  padding: 15px 30px 20px 30px;
+}
+nav li:hover .sousmenu{
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 100;
+  width: 100%;
+}
+.sousmenu li a{
+  padding: 15px 30px;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  transition: background-color 0.5s;
+}
+.sousmenu li{
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.menu1:hover{
+  border-top: 5px solid #003380;
+  background-color: rgb(0, 61, 153, 0.9);
+}
+.menu2:hover{
+  border-top: 5px solid #003380;
+  background-color: rgb(0, 61, 153, 0.9);
+}
+
+.menu3:hover{
+  border-top: 5px solid #003380;
+  background-color: rgb(0, 61, 153, 0.9);
+}
+.menu1 .sousmenu{
+  background-color: rgb(110, 110, 110);
+}
+.menu2 .sousmenu{
+  background-color:  rgb(110, 110, 110);
+}
+.menu3 .sousmenu{
+  background-color:  rgb(110, 110, 110);
+}
+.menu1 ul li a:hover{
+  background-color: rgb(0, 61, 153, 0.9);
+}
+.menu2 ul li a:hover{
+  background-color: rgb(0, 61, 153, 0.9);
+}
+.menu3 ul li a:hover{
+  background-color: rgb(0, 61, 153, 0.9);
+}
+
+input[type=checkbox]:checked ~ ul{
+  display: block;
+}
+
+@media screen and (max-width: 780px){
+  .menu-mobile{
+    display:block;
+    color: #FFF;
+    background-color: #2C75FF;
+    text-align: center;
+    padding: 12px 0px;
+  }
+ nav > ul{
+    display: none;
+  }
+ nav > ul > li, nav > ul > li > ul > li, nav > ul > li > a, nav > ul > li > ul > li > a {
+  width: 100%;
+  text-align: center;
+}
+nav ul li a, nav ul li:hover a{
+  padding: 10px 0px;
+}
+nav ul li:hover .sousmenu{
+  display: block;
+  position: static;
+}
+}
+/*footer*/
+#footer {
+  bottom: 0px;
+}
+
+#footer div {
+  position: fixed;
+  background-color:black;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
+  opacity: 0.8;
+}
+#footer ul{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  list-style: none;
+   height: 20px;
+   bottom: 0px;
+}
+
+#footer ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+#footer ul li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1.5vw;
+}
+#footer ul li a:hover{
+  text-decoration-line:underline;
+}
+#footer ul li.copyrights a{
+  color: #f5f5f5;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 1.3vw;
+}
+
+#footer ul li.copyrights{
+  float: right;
+}
+/*slider*/
+.slider{
+  width: 500px;
+  overflow: hidden;
+  margin: auto;
+  height: 300px;
+
+}
+.slides{
+  width: 1500px;
+  animation: glisse 15s infinite;
+  height: 300px;
+}
+.slide{
+  float: left;
+}
+
+@keyframes glisse{
+  0%{
+    transform: translateX(0);
+  }
+   10%{
+    transform: translateX(0);
+  }
+  33%{
+    transform: translateX(-500px);
+  }
+  43%{
+    transform: translateX(-500px);
+  }
+  66%{
+    transform: translateX(-1000px);
+  }
+  76%{
+    transform: translateX(-1000px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+/* produit */
+.produit{
+  margin-left: auto;
+  margin-right: auto; 
+  display: block;
+  width: 65%;
+  border: 1px solid black; 
+ position: relative;
+ margin-top: 20%;
+}
+.img_produit{
+}
+.img_produit img{
+  width: 100%;
+}
+.produit_titre{
+  margin: 0;
+  text-align: center;
+  top:0;
+  left: 0;
+  background-color: green;
+  padding: 10px 0px;
+}
+.produit_desc {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(110, 110, 110) ;
+  transition: 0.7s;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.9;
+
+}
+.produit_desc p{
+  margin: 5px 1px;
+  opacity: 0%;
+ 
+}
+.produit:hover .produit_desc{
+  width:100%;    
+
+}
+.produit:hover .produit_desc p{
+  transition: 5s;
+ opacity: 100%;
+}
+.img_produit{
+  width: 100%
+}
